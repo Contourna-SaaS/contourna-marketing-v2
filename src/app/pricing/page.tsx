@@ -23,60 +23,61 @@ const tiers = [
   {
     name: 'Starter' as const,
     slug: 'starter',
-    description: 'Everything you need to start selling.',
+    description:
+      'Perfect for small businesses getting started with quality management.',
     priceMonthly: 99,
     href: '#',
     highlights: [
-      { description: 'Up to 3 team members' },
-      { description: 'Up to 5 deal progress boards' },
-      { description: 'Source leads from select platforms' },
-      { description: 'ContournaAI integrations', disabled: true },
-      { description: 'Competitor analysis', disabled: true },
+      { description: 'Up to 5 team members' },
+      { description: 'Basic document templates' },
+      { description: 'Standard operating procedures' },
+      { description: 'AI document generation', disabled: true },
+      { description: 'Custom workflows', disabled: true },
     ],
     features: [
       {
-        section: 'Sourcing',
-        name: 'Accounts',
-        value: 3,
+        section: 'Documentation',
+        name: 'Document templates',
+        value: 'Basic',
       },
       {
-        section: 'Sourcing',
-        name: 'Deal progress boards',
-        value: 5,
+        section: 'Documentation',
+        name: 'Storage capacity',
+        value: '10GB',
       },
       {
-        section: 'Sourcing',
-        name: 'Sourcing platforms',
-        value: 'Select',
+        section: 'Documentation',
+        name: 'Version control',
+        value: true,
       },
       {
-        section: 'Sourcing',
-        name: 'Contacts',
-        value: 100,
-      },
-      {
-        section: 'Sourcing',
-        name: 'AI assisted outreach',
+        section: 'Documentation',
+        name: 'AI-powered creation',
         value: false,
       },
       {
-        section: 'Analysis',
-        name: 'Competitor analysis',
+        section: 'Training',
+        name: 'Employee onboarding',
+        value: 'Basic',
+      },
+      {
+        section: 'Training',
+        name: 'Training materials',
+        value: '10',
+      },
+      {
+        section: 'Training',
+        name: 'Progress tracking',
+        value: true,
+      },
+      {
+        section: 'Quality Management',
+        name: 'Process mapping',
         value: false,
       },
       {
-        section: 'Analysis',
-        name: 'Dashboard reporting',
-        value: false,
-      },
-      {
-        section: 'Analysis',
-        name: 'Community insights',
-        value: false,
-      },
-      {
-        section: 'Analysis',
-        name: 'Performance analysis',
+        section: 'Quality Management',
+        name: 'Compliance tracking',
         value: false,
       },
       {
@@ -86,73 +87,73 @@ const tiers = [
       },
       {
         section: 'Support',
-        name: '24 / 7 call center support',
+        name: 'Priority support',
         value: false,
       },
       {
         section: 'Support',
-        name: 'Dedicated account manager',
+        name: 'Dedicated manager',
         value: false,
       },
     ],
   },
   {
-    name: 'Growth' as const,
-    slug: 'growth',
-    description: 'All the extras for your growing team.',
+    name: 'Professional' as const,
+    slug: 'professional',
+    description: 'Advanced features for growing organizations.',
     priceMonthly: 149,
     href: '#',
     highlights: [
-      { description: 'Up to 10 team members' },
-      { description: 'Unlimited deal progress boards' },
-      { description: 'Source leads from over 50 verified platforms' },
-      { description: 'ContournaAI integrations', disabled: false },
-      { description: '5 competitor analyses per month' },
+      { description: 'Up to 20 team members' },
+      { description: 'Advanced document templates' },
+      { description: 'Custom workflows and processes' },
+      { description: 'AI document generation' },
+      { description: 'Quality metrics dashboard' },
     ],
     features: [
       {
-        section: 'Sourcing',
-        name: 'Accounts',
-        value: 10,
+        section: 'Documentation',
+        name: 'Document templates',
+        value: 'Advanced',
       },
       {
-        section: 'Sourcing',
-        name: 'Deal progress boards',
+        section: 'Documentation',
+        name: 'Storage capacity',
+        value: '50GB',
+      },
+      {
+        section: 'Documentation',
+        name: 'Version control',
+        value: true,
+      },
+      {
+        section: 'Documentation',
+        name: 'AI-powered creation',
+        value: true,
+      },
+      {
+        section: 'Training',
+        name: 'Employee onboarding',
+        value: 'Advanced',
+      },
+      {
+        section: 'Training',
+        name: 'Training materials',
         value: 'Unlimited',
       },
       {
-        section: 'Sourcing',
-        name: 'Sourcing platforms',
-        value: '100+',
-      },
-      {
-        section: 'Sourcing',
-        name: 'Contacts',
-        value: 1000,
-      },
-      {
-        section: 'Sourcing',
-        name: 'AI assisted outreach',
+        section: 'Training',
+        name: 'Progress tracking',
         value: true,
       },
       {
-        section: 'Analysis',
-        name: 'Competitor analysis',
-        value: '5 / month',
-      },
-      {
-        section: 'Analysis',
-        name: 'Dashboard reporting',
+        section: 'Quality Management',
+        name: 'Process mapping',
         value: true,
       },
       {
-        section: 'Analysis',
-        name: 'Community insights',
-        value: true,
-      },
-      {
-        section: 'Analysis',
-        name: 'Performance analysis',
+        section: 'Quality Management',
+        name: 'Compliance tracking',
         value: true,
       },
       {
@@ -162,12 +163,12 @@ const tiers = [
       },
       {
         section: 'Support',
-        name: '24 / 7 call center support',
+        name: 'Priority support',
         value: true,
       },
       {
         section: 'Support',
-        name: 'Dedicated account manager',
+        name: 'Dedicated manager',
         value: false,
       },
     ],
@@ -175,60 +176,60 @@ const tiers = [
   {
     name: 'Enterprise' as const,
     slug: 'enterprise',
-    description: 'Added flexibility to close deals at scale.',
+    description: 'Custom solutions for large organizations.',
     priceMonthly: 299,
     href: '#',
     highlights: [
-      { description: 'Unlimited active team members' },
-      { description: 'Unlimited deal progress boards' },
-      { description: 'Source leads from over 100 verified platforms' },
-      { description: 'ContournaAI integrations', disabled: false },
-      { description: 'Unlimited competitor analyses', disabled: false },
+      { description: 'Unlimited team members' },
+      { description: 'Custom document templates' },
+      { description: 'Advanced AI capabilities' },
+      { description: 'Custom integrations' },
+      { description: 'Dedicated support team' },
     ],
     features: [
       {
-        section: 'Sourcing',
-        name: 'Accounts',
+        section: 'Documentation',
+        name: 'Document templates',
+        value: 'Custom',
+      },
+      {
+        section: 'Documentation',
+        name: 'Storage capacity',
         value: 'Unlimited',
       },
       {
-        section: 'Sourcing',
-        name: 'Deal progress boards',
-        value: 'Unlimited',
-      },
-      {
-        section: 'Sourcing',
-        name: 'Sourcing platforms',
-        value: '100+',
-      },
-      {
-        section: 'Sourcing',
-        name: 'Contacts',
-        value: 'Unlimited',
-      },
-      {
-        section: 'Sourcing',
-        name: 'AI assisted outreach',
+        section: 'Documentation',
+        name: 'Version control',
         value: true,
       },
       {
-        section: 'Analysis',
-        name: 'Competitor analysis',
+        section: 'Documentation',
+        name: 'AI-powered creation',
+        value: 'Advanced',
+      },
+      {
+        section: 'Training',
+        name: 'Employee onboarding',
+        value: 'Custom',
+      },
+      {
+        section: 'Training',
+        name: 'Training materials',
         value: 'Unlimited',
       },
       {
-        section: 'Analysis',
-        name: 'Dashboard reporting',
+        section: 'Training',
+        name: 'Progress tracking',
         value: true,
       },
       {
-        section: 'Analysis',
-        name: 'Community insights',
+        section: 'Quality Management',
+        name: 'Process mapping',
         value: true,
       },
       {
-        section: 'Analysis',
-        name: 'Performance analysis',
+        section: 'Quality Management',
+        name: 'Compliance tracking',
         value: true,
       },
       {
@@ -238,12 +239,12 @@ const tiers = [
       },
       {
         section: 'Support',
-        name: '24 / 7 call center support',
+        name: 'Priority support',
         value: true,
       },
       {
         section: 'Support',
-        name: 'Dedicated account manager',
+        name: 'Dedicated manager',
         value: true,
       },
     ],
@@ -253,10 +254,11 @@ const tiers = [
 function Header() {
   return (
     <Container className="mt-16">
-      <Heading as="h1">Pricing that grows with your team size.</Heading>
+      <Heading as="h1">Simple pricing for any size organization</Heading>
       <Lead className="mt-6 max-w-3xl">
-        Companies all over the world have closed millions of deals with
-        Contourna. Sign up today and start selling smarter.
+        Choose the plan that best fits your needs. All plans include access to
+        our core quality management features with additional capabilities as you
+        grow.
       </Lead>
     </Container>
   )
@@ -528,15 +530,17 @@ function Testimonial() {
           <div className="flex max-lg:mt-16 lg:col-span-2 lg:px-16">
             <figure className="mx-auto flex max-w-xl flex-col gap-16 max-lg:text-center">
               <blockquote>
-                <p className="relative text-3xl tracking-tight text-white before:absolute before:-translate-x-full before:content-['“'] after:absolute after:content-['”'] lg:text-4xl">
+                <p className="relative text-3xl tracking-tight text-white before:absolute before:-left-6 before:content-[''] after:absolute after:ml-1 after:content-[''] lg:text-4xl">
                   Thanks to Contourna, we&apos;re finding new leads that we
                   never would have found with legal methods.
                 </p>
               </blockquote>
               <figcaption className="mt-auto">
-                <p className="text-sm/6 font-medium text-white">Tina Yards</p>
-                <p className="text-sm/6 font-medium">
-                  <span className="bg-gradient-to-r from-[#fff1be] from-[28%] via-[#ee87cb] via-[70%] to-[#b060ff] bg-clip-text text-transparent">
+                <p className="text-sm font-medium leading-6 text-white">
+                  Tina Yards
+                </p>
+                <p className="text-sm font-medium leading-6">
+                  <span className="from-28% bg-gradient-to-r from-[#fff1be] via-[#ee87cb] via-70% to-[#b060ff] bg-clip-text text-transparent">
                     VP of Sales, Protocol
                   </span>
                 </p>
@@ -557,48 +561,37 @@ function FrequentlyAskedQuestions() {
           Frequently asked questions
         </Subheading>
         <Heading as="div" className="mt-2 text-center">
-          Your questions answered.
+          Common questions about our services
         </Heading>
         <div className="mx-auto mb-32 mt-16 max-w-xl space-y-12">
           <dl>
             <dt className="text-sm font-semibold">
-              What measures are in place to ensure the security of our data?
+              How secure is my company's documentation?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Data security is a top priority for us, which is ironic given that
-              our business depends on others not taking it very seriously. We
-              understand that any breach could put both us and most of our
-              customers out of business—and behind bars. We employ robust
-              security measures, including data encryption, secure data centers,
-              and regular security audits to ensure this never happens.
+              We take security seriously. All documents are encrypted both in
+              transit and at rest. Our systems are regularly audited and comply
+              with industry security standards.
             </dd>
           </dl>
           <dl>
             <dt className="text-sm font-semibold">
-              Is there a mobile app available for your platform?
+              Can I customize document templates?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, we offer a mobile app that provides all the key
-              functionalities of our desktop platform, allowing sales reps to
-              manage deals on the go. Additionally, we have another app
-              pre-installed on most modern smartphones that allows us to track
-              your location, listen to your conversations, and access your
-              camera and microphone at any time. This app is not available for
-              download.
+              Yes, all plans include customizable templates. Professional and
+              Enterprise plans offer advanced customization options and
+              AI-powered document generation.
             </dd>
           </dl>
           <dl>
             <dt className="text-sm font-semibold">
-              Can I customize the workflow to match our company’s deal process?
+              How does the AI document generation work?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, our platform is highly customizable, although there should be
-              no need. Before you sign up, we discreetly gather information
-              about your company and its processes from a variety of sources. We
-              then use this information to pre-configure the platform to match
-              your existing workflows. This is why we ask for your social
-              security number and access to your email account during the
-              sign-up process.
+              Our AI system helps create initial drafts of documents based on
+              your requirements and industry standards. You can then review and
+              customize these documents to match your specific needs.
             </dd>
           </dl>
           <dl>
@@ -606,23 +599,20 @@ function FrequentlyAskedQuestions() {
               What kind of support do you offer?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              We offer comprehensive support through multiple channels,
-              including 24/7 live chat, email, and phone support. However, since
-              we have full access to your internal network, we will know if
-              you’re having issues before you do.
+              All plans include email support. Professional and Enterprise plans
+              include priority support, with Enterprise receiving a dedicated
+              account manager for personalized assistance.
             </dd>
           </dl>
           <dl>
             <dt className="text-sm font-semibold">
-              Can I integrate the CRM with other sales intelligence tools?
+              Can I upgrade or downgrade my plan?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-600">
-              Yes, our solution integrates seamlessly with a variety of other
-              systems. However, be warned that most of these integrations are
-              short-lived. We have a dedicated team of engineers who
-              reverse-engineer the APIs of other tools, enabling us to build
-              their functionality into our product and eventually put them out
-              of business.
+              Yes, you can change your plan at any time. When upgrading, you'll
+              have immediate access to additional features. When downgrading,
+              you'll retain access to your current features until the end of
+              your billing period.
             </dd>
           </dl>
         </div>
