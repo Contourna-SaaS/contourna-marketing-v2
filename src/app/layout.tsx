@@ -1,10 +1,11 @@
+import '@/styles/main.css'
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Radiant',
-    default: 'Radiant - Close every deal',
+    template: '%s - Contourna',
+    default: 'Contourna - Quality Management System',
   },
 }
 
@@ -23,7 +24,7 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="The Radiant Blog"
+          title="The Contourna Blog"
           href="/blog/feed.xml"
         />
       </head>

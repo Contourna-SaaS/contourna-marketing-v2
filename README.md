@@ -1,6 +1,6 @@
-# Radiant
+# Contourna
 
-Radiant is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org), with a blog powered by [Sanity](https://www.sanity.io).
+Contourna is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org), with a blog powered by [Sanity](https://www.sanity.io).
 
 ## Getting started
 
@@ -13,7 +13,7 @@ npm install
 Next, create a new Sanity project to power the blog within this template:
 
 ```bash
-npm create sanity@latest -- --env=.env.local --create-project "Radiant Blog" --dataset production
+npm create sanity@latest -- --env=.env.local --create-project "Contourna Blog" --dataset production
 ```
 
 This will prompt you to create a new Sanity account if you don't have one already. When asked "Would you like to add configuration files for a Sanity project in this Next.js folder?", choose "n".

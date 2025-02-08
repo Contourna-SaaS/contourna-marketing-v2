@@ -9,6 +9,10 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
       },
+      colors: {
+        "c-yellow": "#FDB913",
+        'c-brown': "#37300E"
+      }
     },
   },
   plugins: [],
