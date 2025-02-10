@@ -7,6 +7,7 @@ import {
 } from '@headlessui/react'
 import { Bars2Icon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion'
+import { Button } from './button'
 import { Link } from './link'
 import { Logo } from './logo'
 
@@ -19,7 +20,7 @@ const links = [
 
 function DesktopNav() {
   return (
-    <nav className="relative hidden lg:flex">
+    <nav className="relative hidden items-center lg:flex">
       {links.map(({ href, label }) => (
         <Link
           key={href}
@@ -29,6 +30,9 @@ function DesktopNav() {
           {label}
         </Link>
       ))}
+      <Button href="/one-time-generation" className="ml-6">
+        Create Documents
+      </Button>
     </nav>
   )
 }
@@ -64,6 +68,19 @@ function MobileNav() {
             </Link>
           </motion.div>
         ))}
+        <motion.div
+          initial={{ opacity: 0, rotateX: -90 }}
+          animate={{ opacity: 1, rotateX: 0 }}
+          transition={{
+            duration: 0.15,
+            ease: 'easeInOut',
+            rotateX: { duration: 0.3, delay: links.length * 0.1 },
+          }}
+        >
+          <Button href="/one-time-generation" className="w-full justify-center">
+            Create Documents
+          </Button>
+        </motion.div>
       </div>
       <div className="absolute left-1/2 w-screen -translate-x-1/2">
         <div className="absolute inset-x-0 top-0 border-t border-black/5" />
