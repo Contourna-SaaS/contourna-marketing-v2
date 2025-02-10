@@ -11,7 +11,6 @@ import { Link } from './link'
 import { Logo } from './logo'
 
 const links = [
-  { href: '/services', label: 'Services' },
   { href: '/company', label: 'Company' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/blog', label: 'Blog' },

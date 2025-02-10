@@ -29,7 +29,6 @@ function FooterNavigation() {
       <div>
         <FooterHeading>Company</FooterHeading>
         <FooterLinkList>
-          <FooterLink href="/services">Services</FooterLink>
           <FooterLink href="/company">Company</FooterLink>
           <FooterLink href="/pricing">Pricing</FooterLink>
           <FooterLink href="/blog">Blog</FooterLink>
