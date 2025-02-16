@@ -68,7 +68,7 @@ export default function Success() {
         <GradientBackground />
         <Container>
           <Navbar />
-          <div className="mt-16 text-center lg:mt-32">
+          <div className="my-16 text-center lg:mt-32">
             <Heading as="h1" className="text-red-600">
               Payment Verification Failed
             </Heading>
@@ -90,7 +90,7 @@ export default function Success() {
       <GradientBackground />
       <Container>
         <Navbar />
-        <div className="mt-16 lg:mt-32">
+        <div className="my-16 lg:mt-32">
           <div className="text-center">
             <CheckCircleIcon className="mx-auto h-16 w-16 text-c-yellow" />
             <Heading as="h1" className="mt-6 text-c-brown">

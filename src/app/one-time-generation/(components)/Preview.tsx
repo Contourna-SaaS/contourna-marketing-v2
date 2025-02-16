@@ -3,6 +3,10 @@
 import { Button } from '@/components/button'
 import { loadStripe } from '@stripe/stripe-js'
 import { useForm } from '../(context)/FormContext'
+import {
+  getCompanySizeDisplayValue,
+  getIndustryDisplayValue,
+} from '../(lib)/utils'
 
 // Make sure to add your publishable key to .env.local
 const stripePromise = loadStripe(
@@ -65,13 +69,17 @@ export function Preview() {
                   Company Size
                 </dt>
                 <dd className="mt-1 text-sm text-gray-900">
-                  {formData.companySize} employees
+                  {formData.companySize
+                    ? getCompanySizeDisplayValue(formData.companySize)
+                    : 'Not specified'}
                 </dd>
               </div>
               <div>
                 <dt className="text-sm font-medium text-gray-500">Industry</dt>
                 <dd className="mt-1 text-sm text-gray-900">
-                  {formData.industry}
+                  {formData.industry
+                    ? getIndustryDisplayValue(formData.industry)
+                    : 'Not specified'}
                 </dd>
               </div>
             </dl>

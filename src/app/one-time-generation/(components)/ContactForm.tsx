@@ -2,6 +2,8 @@
 
 import { Button } from '@/components/button'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useState } from 'react'
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete'
 import { useForm as useHookForm } from 'react-hook-form'
 import type { z } from 'zod'
 import { formSchema, useForm } from '../(context)/FormContext'
@@ -13,11 +15,13 @@ type ContactFormData = Pick<
 
 export function ContactForm() {
   const { formData, setFormData, setCurrentStep } = useForm()
+  const [locationValue, setLocationValue] = useState(null)
 
   const {
     register,
     handleSubmit,
     formState: { errors },
+    setValue,
   } = useHookForm<ContactFormData>({
     resolver: zodResolver(
       formSchema.pick({
@@ -47,11 +51,32 @@ export function ContactForm() {
         >
           Business Location
         </label>
-        <input
-          type="text"
-          {...register('location')}
-          placeholder="City, Country"
-          className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-black focus:outline-none focus:ring-1 focus:ring-black"
+        <GooglePlacesAutocomplete
+          apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
+          selectProps={{
+            value: locationValue,
+            onChange: (value: any) => {
+              setLocationValue(value)
+              setValue('location', value.label)
+            },
+            placeholder: 'Search for your business location',
+            className: 'mt-1',
+            styles: {
+              control: (provided) => ({
+                ...provided,
+                borderColor: '#D1D5DB',
+                borderRadius: '0.375rem',
+                boxShadow: 'none',
+                '&:hover': {
+                  borderColor: '#000000',
+                },
+              }),
+              input: (provided) => ({
+                ...provided,
+                padding: '4px 0',
+              }),
+            },
+          }}
         />
         {errors.location && (
           <p className="mt-1 text-sm text-red-600">{errors.location.message}</p>

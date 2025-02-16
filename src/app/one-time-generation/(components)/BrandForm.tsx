@@ -111,7 +111,7 @@ export function BrandForm() {
               <img
                 src={previewUrl}
                 alt="Logo preview"
-                className="h-full w-full object-contain"
+                className="h-full w-full object-contain"  
               />
             </div>
           )}
